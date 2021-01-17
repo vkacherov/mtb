@@ -138,7 +138,7 @@ jobs:
         set -x
         # Take down any old deployment
         oc delete all --selector="$SELECTOR"
-        oc new-app --name $APP_NAME --docker-image="$IMAGE"
+        oc new-app --name $APP_NAME --docker-image="$IMAGE" --allow-missing-images
 
         # Make sure the app port is exposed
         oc patch svc $APP_NAME -p "{ \"spec\": { \"ports\": [{ \"name\": \"$PORT-tcp\", \"port\": $PORT }] } }"
