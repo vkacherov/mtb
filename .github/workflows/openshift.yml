@@ -121,7 +121,7 @@ jobs:
     # export IMAGE="${{ steps.push-to-registry.outputs.registry-path }}"
     - name: Create and expose app
       run: |
-        export IMAGE="${{ env.REGISTRY }}/${{ env.APP_NAME }}:${{ env.TAG }}"
+        export IMAGE="vadimkacr.azurecr.io/${{ env.APP_NAME }}:${{ env.TAG }}"
         export PORT=${{ env.APP_PORT }}
 
         export SELECTOR="app=${{ env.APP_NAME }}"
