@@ -91,11 +91,11 @@ jobs:
           ./Dockerfile
 
     # Login to ACR
-    - uses: azure/docker-login@v1
-      with:
-        login-server: ${{ env.REGISTRY }}
-        username: ${{ env.REGISTRY_USER }}
-        password: ${{ env.REGISTRY_PASSWORD }}
+    # - uses: azure/docker-login@v1
+    #   with:
+    #     login-server: ${{ env.REGISTRY }}
+    #     username: ${{ env.REGISTRY_USER }}
+    #     password: ${{ env.REGISTRY_PASSWORD }}
 
     # https://github.com/redhat-actions/push-to-registry#readme
     - name: Push to registry
