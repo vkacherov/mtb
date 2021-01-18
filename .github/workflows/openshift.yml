@@ -125,11 +125,9 @@ jobs:
 
     # This step should create a deployment, service, and route to run your app and expose it to the internet.
     # Feel free to replace this with 'oc apply', 'helm install', or however you like to deploy your app.
-    # export IMAGE="${{ steps.push-to-registry.outputs.registry-path }}"
     - name: Create and expose app
       run: |
-        export IMAGE="vadimkacr.azurecr.io/${{ env.APP_NAME }}:${{ env.TAG }}"
-        echo "IMAGE=$IMAGE"
+        export IMAGE="${{ steps.push-to-registry.outputs.registry-path }}"
         export PORT=${{ env.APP_PORT }}
 
         export SELECTOR="app=${{ env.APP_NAME }}"
