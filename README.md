@@ -1,4 +1,4 @@
-# MTB 
+# GitHub Actions runner demo: OpenShift  
 Sample dotnet core project that showcases OpenShift CI/CD capabilities.
 
 ## Setup
