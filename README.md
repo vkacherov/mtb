@@ -1,5 +1,5 @@
-# MTB
-Sample dotnet core project that showcases OpenShit CI/CD capabilities.
+# MTB 
+Sample dotnet core project that showcases OpenShift CI/CD capabilities.
 
 ## Setup
 Set GitHub registry secrects appropriate for you.
